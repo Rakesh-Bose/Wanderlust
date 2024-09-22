@@ -1,0 +1,45 @@
+<%-layout("/layouts/boilerplate")%>
+
+    <body>
+        <div class="row">
+            <div class="col-8 offset-2">
+                <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <lable for="title" class="form-label">Title</lable>
+                        <input name="title" placeholder="enter title" type="text" class="form-control" required>
+                        <div class="valid-feedback">Titlè looks good</div>
+                        <!-- for box underline part -->
+                    </div>
+                    
+                    <div class="mb-3">
+                        <lable for="description" class="form-label">Description</lable>
+                        <textarea name="description" placeholder="enter title" type="text"
+                            class="form-control" required></textarea>
+                            <div class="valid-feedback">Description looks good</div>
+                    </div>
+                    <div class="mb-3">
+                        <lable for="image" class="form-label">Upload Listing Image</lable>
+                        <input name="image" type="file" class="form-control">
+                    </div>
+                    
+                    <div class="row">
+                        <div class="mb-3 col-4">
+                            <lable for="price" class="form-label">Price</lable>
+                            <input name="price" placeholder="enter price"  class="form-control" required>
+                            <div class="invalid-feedback">please enter valid price</div>
+                        </div>
+                        <div class="mb-3 col-md-8">
+                            <label for="location" class="form-label">Location</label>
+                            <input name="location" placeholder="enter location" type="text" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="country" class="form-label">Country</label>
+                        <input name="country" placeholder="enter country" type="text" class="form-control" required>
+                    </div>
+                    <button class="btn btn-primary">Add</button>
+                </form>
+
+            </div>
+        </div>
+    </body>
